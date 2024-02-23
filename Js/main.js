@@ -136,7 +136,7 @@ const body = document.querySelector('body');
 burger.addEventListener('click', () => {
   burger.classList.toggle("active");
   navMenu.classList.toggle("active");
-  body.classList.toggle('lock');
+  body.classList.add('lock');
 })
 
 const burgerMenuLinks = navMenu.getElementsByTagName("a");
@@ -144,6 +144,7 @@ for (let i = 0; i < burgerMenuLinks.length; i++) {
   burgerMenuLinks[i].addEventListener("click", function () {
     navMenu.classList.remove('active');
     burger.classList.remove('active');
+    body.classList.remove('lock');
   });
 }
 
